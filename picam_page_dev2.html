@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta name="viewport" content="width=550, initial-scale=1">
+      <title>RPi Cam Control v6.0.35: mycam@raspberrypi</title>
+      <link rel="stylesheet" href="css/style_minified.css" />
+      <link rel="stylesheet" href="css/es_Night.css" />
+      <script src="js/style_minified.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/pipan.js"></script>
+   </head>
+   <body onload="setTimeout('init(0, 25, 1);', 100);">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="display:block;">
+         <div class="container">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="#">RPi Cam Control v6.0.35: mycam@raspberrypi</a>
+            </div>
+         </div>
+      </div>
+      <input id="toggle_display" type="button" class="btn btn-primary" value="Simple" style="position:absolute;top:60px;right:10px;" onclick="set_display(this.value);">
+      <div class="container-fluid text-center liveimage">
+         <div><img id="mjpeg_dest"   onclick="toggle_fullscreen(this);" src="./loading.jpg"></div>
+      </div>
+    </body>
+</html>
